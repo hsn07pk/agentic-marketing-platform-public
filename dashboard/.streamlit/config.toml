@@ -1,0 +1,15 @@
+[server]
+runOnSave = false
+fileWatcherType = "none"
+enableWebsocketCompression = true
+maxMessageSize = 200
+headless = true
+
+[runner]
+fastReruns = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showErrorDetails = true

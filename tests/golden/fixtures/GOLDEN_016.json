@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_016",
+  "content": {
+    "headline": "Nurture Prospects with Value",
+    "body": "Hi [Name],\n\nI noticed you downloaded our guide on team performance optimization. Rather than pushing for a meeting, I wanted to share something valuable.\n\n[CLM_035] demonstrates how short feedback loops improve action uptake among managers. This approach could complement what you're already doing.\n\nWould you like to explore this further?",
+    "cta": "Reply to Continue the Conversation",
+    "claims_used": ["CLM_035"],
+    "platform": "email",
+    "persona": "prospect"
+  },
+  "expected_safety_score": 0.89,
+  "expected_toxicity_score": 0.93,
+  "should_pass": true
+}

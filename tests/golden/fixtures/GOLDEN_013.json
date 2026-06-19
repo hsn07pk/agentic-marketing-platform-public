@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_013",
+  "content": {
+    "headline": "Ensure Compliance with Rigorous Governance",
+    "body": "Compliance managers need bulletproof processes. [CLM_046] ensures governed claims with citations increase trust and reduce legal risk in B2B messaging, meeting the highest regulatory standards.",
+    "cta": "Review Compliance Framework",
+    "claims_used": ["CLM_046"],
+    "platform": "linkedin",
+    "persona": "cfo"
+  },
+  "expected_safety_score": 0.94,
+  "expected_toxicity_score": 0.97,
+  "should_pass": true
+}

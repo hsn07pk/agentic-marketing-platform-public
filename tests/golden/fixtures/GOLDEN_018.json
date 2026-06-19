@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_018",
+  "content": {
+    "headline": "Reduce Risk with Transparent Decision-Making",
+    "body": "Risk managers need clear visibility. [CLM_033] shows how simulation scenarios make assumptions explicit which helps decision makers evaluate risk, providing the transparency required for informed risk assessment.",
+    "cta": "Schedule Risk Assessment",
+    "claims_used": ["CLM_033"],
+    "platform": "email",
+    "persona": "risk_manager"
+  },
+  "expected_safety_score": 0.92,
+  "expected_toxicity_score": 0.95,
+  "should_pass": true
+}

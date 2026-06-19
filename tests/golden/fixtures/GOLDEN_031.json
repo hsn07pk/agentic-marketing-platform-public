@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_031",
+  "content": {
+    "headline": "Professional Excellence in Team Leadership",
+    "body": "Building high-performing teams requires more than intuition. [CLM_003] demonstrates how QWL-guided, evidence-based actions help teams focus effort where impact is highest. [CLM_032] shows how action ranking should consider expected ROI and feasibility to avoid initiative overload.\n\nOur approach combines academic rigor with practical application, delivering results that stand up to board-level scrutiny.",
+    "cta": "Schedule Executive Briefing",
+    "claims_used": ["CLM_003", "CLM_032"],
+    "platform": "linkedin",
+    "persona": "decision_maker"
+  },
+  "expected_safety_score": 0.94,
+  "expected_toxicity_score": 0.97,
+  "should_pass": true
+}

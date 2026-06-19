@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_005",
+  "content": {
+    "headline": "Cut Costs Without Cutting Quality",
+    "body": "Budget holders face constant pressure to do more with less. Our approach helps:\n\n[CLM_032] ensures action ranking considers expected ROI and feasibility to avoid initiative overload.\n\n[CLM_035] demonstrates how short feedback loops improve action uptake among managers, reducing wasted effort.",
+    "cta": "Calculate Your Savings",
+    "claims_used": ["CLM_032", "CLM_035"],
+    "platform": "email",
+    "persona": "budget_holder"
+  },
+  "expected_safety_score": 0.87,
+  "expected_toxicity_score": 0.91,
+  "should_pass": true
+}

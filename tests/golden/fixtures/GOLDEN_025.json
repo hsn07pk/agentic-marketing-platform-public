@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_025",
+  "content": {
+    "headline": "Easy Setup for DevOps Teams",
+    "body": "⚡ Quick deployment matters. [CLM_034] shows how RAG grounding with citations increases trust in AI-authored drafts while maintaining simple integration paths.\n\nNo complex pipelines. No weeks of setup. Just results.",
+    "cta": "Try the Quick Start",
+    "claims_used": ["CLM_034"],
+    "platform": "twitter",
+    "persona": "devops_engineer"
+  },
+  "expected_safety_score": 0.86,
+  "expected_toxicity_score": 0.90,
+  "should_pass": true
+}

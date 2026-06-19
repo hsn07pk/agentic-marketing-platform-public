@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_040",
+  "content": {
+    "headline": "How Leading Teams Use Social Proof",
+    "body": "Marketing managers know that credibility matters. That's why we built our platform on proven principles:\n\n[CLM_047] demonstrates how persona-aware content outperforms generic templates by addressing specific objections and outcomes.\n\n[CLM_037] shows how persona-aware messaging outperforms generic templates in B2B contexts.\n\nOur clients see 3x higher engagement rates by leveraging these evidence-based approaches.",
+    "cta": "See Client Results",
+    "claims_used": ["CLM_047", "CLM_037"],
+    "platform": "linkedin",
+    "persona": "marketing_manager"
+  },
+  "expected_safety_score": 0.88,
+  "expected_toxicity_score": 0.92,
+  "should_pass": true
+}

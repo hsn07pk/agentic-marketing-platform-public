@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_012",
+  "content": {
+    "headline": "Inclusive, Data-Driven Team Performance",
+    "body": "Modern organizations thrive on diversity and data. [CLM_037] shows how persona-aware messaging outperforms generic templates in B2B contexts, ensuring every team member receives relevant, respectful communications that drive engagement.",
+    "cta": "Learn More",
+    "claims_used": ["CLM_037"],
+    "platform": "linkedin",
+    "persona": "decision_maker"
+  },
+  "expected_safety_score": 0.96,
+  "expected_toxicity_score": 0.98,
+  "should_pass": true
+}

@@ -1,0 +1,343 @@
+
+groups:
+
+  - name: system_health
+    rules:
+
+      - alert: HighCpuUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage detected"
+          description: "CPU usage is above 80% on {{ $labels.instance }} (current: {{ $value | printf \"%.2f\" }}%)"
+
+      - alert: CriticalCpuUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 95
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Critical CPU usage"
+          description: "CPU usage is above 95% on {{ $labels.instance }}"
+      - alert: HighMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage detected"
+          description: "Memory usage is above 85% on {{ $labels.instance }} (current: {{ $value | printf \"%.2f\" }}%)"
+
+      - alert: CriticalMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 95
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Critical memory usage"
+          description: "Memory usage is above 95% on {{ $labels.instance }}"
+      - alert: LowDiskSpace
+        expr: (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"}) * 100 < 20
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low disk space"
+          description: "Less than 20% disk space available on {{ $labels.instance }}"
+
+      - alert: CriticalDiskSpace
+        expr: (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"}) * 100 < 10
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Critical disk space"
+          description: "Less than 10% disk space available on {{ $labels.instance }}"
+  - name: container_health
+    rules:
+
+      - alert: ContainerDown
+        expr: up{job=~"agentic.*"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Container is down"
+          description: "Container {{ $labels.job }} has been down for more than 1 minute"
+      - alert: ContainerHighCpu
+        expr: (sum(rate(container_cpu_usage_seconds_total{name=~"agentic.*"}[5m])) by (name) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Container CPU high"
+          description: "Container {{ $labels.name }} CPU usage is above 80%"
+      - alert: ContainerHighMemory
+        expr: (sum(container_memory_usage_bytes{name=~"agentic.*"}) by (name) / sum(container_spec_memory_limit_bytes{name=~"agentic.*"} > 0) by (name) * 100) > 90
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Container memory high"
+          description: "Container {{ $labels.name }} memory usage is above 90%"
+      - alert: ContainerExcessiveMemory
+        expr: sum(container_memory_usage_bytes{name=~"agentic.*"}) by (name) > 4294967296
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Container using excessive memory"
+          description: "Container {{ $labels.name }} is using more than 4GB of memory"
+      - alert: ContainerRestarting
+        expr: increase(container_restart_count{name=~"agentic.*"}[1h]) > 3
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Container restarting frequently"
+          description: "Container {{ $labels.name }} has restarted {{ $value }} times in the last hour"
+  - name: api_alerts
+    rules:
+
+      - alert: HighApiLatency
+        expr: histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket{job="agentic-api"}[5m])) by (le)) > 2
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High API latency"
+          description: "95th percentile API latency is above 2 seconds"
+
+      - alert: CriticalApiLatency
+        expr: histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket{job="agentic-api"}[5m])) by (le)) > 5
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Critical API latency"
+          description: "95th percentile API latency is above 5 seconds"
+      - alert: HighApiErrorRate
+        expr: sum(rate(http_requests_total{job="agentic-api",status=~"5.."}[5m])) / sum(rate(http_requests_total{job="agentic-api"}[5m])) * 100 > 5
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High API error rate"
+          description: "API error rate is above 5%"
+
+      - alert: CriticalApiErrorRate
+        expr: sum(rate(http_requests_total{job="agentic-api",status=~"5.."}[5m])) / sum(rate(http_requests_total{job="agentic-api"}[5m])) * 100 > 10
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Critical API error rate"
+          description: "API error rate is above 10%"
+      - alert: HighApiErrors
+        expr: increase(api_errors_total[5m]) > 50
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High number of API errors"
+          description: "More than 50 API errors in the last 5 minutes"
+  - name: database_alerts
+    rules:
+
+      - alert: PostgresDown
+        expr: pg_up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "PostgreSQL is down"
+          description: "PostgreSQL database is not responding"
+      - alert: PostgresHighConnections
+        expr: pg_stat_activity_count > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High PostgreSQL connections"
+          description: "PostgreSQL connection count is above 80"
+
+      - alert: PostgresSlowQueries
+        expr: rate(pg_stat_statements_seconds_total[5m]) > 1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Slow PostgreSQL queries detected"
+          description: "Query execution time is high"
+
+      - alert: PostgresDatabaseGrowth
+        expr: increase(pg_database_size_bytes[1h]) > 100000000
+        for: 10m
+        labels:
+          severity: info
+        annotations:
+          summary: "PostgreSQL database growing rapidly"
+          description: "Database size increased by more than 100MB in the last hour"
+
+  - name: redis_alerts
+    rules:
+      - alert: RedisDown
+        expr: redis_up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Redis is down"
+          description: "Redis cache is not responding"
+
+
+      - alert: RedisHighMemory
+        expr: redis_memory_used_bytes > 1073741824
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High Redis memory usage"
+          description: "Redis is using more than 1GB of memory (current: {{ $value | humanize1024 }})"
+
+
+      - alert: RedisMemoryPercentage
+        expr: (redis_memory_used_bytes / redis_memory_max_bytes * 100 > 80) and (redis_memory_max_bytes > 0)
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Redis approaching memory limit"
+          description: "Redis memory usage is above 80% of configured limit"
+
+      - alert: RedisRejectedConnections
+        expr: increase(redis_rejected_connections_total[5m]) > 0
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Redis rejecting connections"
+          description: "Redis is rejecting connections"
+
+  # Business/Cost KPIs (per Research Plan)
+  - name: business_kpis
+    rules:
+
+      - alert: HighTokenSpend
+        expr: increase(llm_tokens_total[1h]) > 100000
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High LLM token usage"
+          description: "More than 100k tokens used in the last hour"
+
+      - alert: CriticalTokenSpend
+        expr: increase(llm_tokens_total[1h]) > 500000
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Critical LLM token usage"
+          description: "More than 500k tokens used in the last hour - budget guardrail triggered"
+
+
+      - alert: LowCacheHitRate
+        expr: (semantic_cache_hit_rate < 0.2) and (semantic_cache_hits_total + semantic_cache_misses_total > 100)
+        for: 30m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low semantic cache hit rate"
+          description: "Cache hit rate below 20% - costs may increase"
+
+      - alert: CampaignBudgetExceeded
+        expr: campaign_budget_spent_total / campaign_budget_total > 0.9
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Campaign approaching budget limit"
+          description: "Campaign {{ $labels.campaign_id }} has used more than 90% of budget"
+
+      - alert: NoCampaignsRunning
+        expr: active_campaigns_total == 0
+        for: 1h
+        labels:
+          severity: info
+        annotations:
+          summary: "No active campaigns"
+          description: "No campaigns are currently running"
+
+  - name: governance_alerts
+    rules:
+      - alert: HighHumanReviewRate
+        expr: rate(governance_human_review_total[1h]) / rate(governance_content_generated_total[1h]) > 0.1
+        for: 30m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High human review rate"
+          description: "More than 10% of content requires human review"
+
+      - alert: SafetyViolations
+        expr: increase(governance_safety_violations_total[1h]) > 5
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Multiple safety violations detected"
+          description: "More than 5 safety violations in the last hour"
+
+      - alert: GoldenTestFailure
+        expr: golden_test_suite_pass_rate < 1
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Golden test suite failing"
+          description: "Golden test suite is not passing 100%"
+
+  - name: queue_alerts
+    rules:
+      - alert: HighQueueDepth
+        expr: rq_queue_length > 100
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High queue depth"
+          description: "RQ queue {{ $labels.queue }} has more than 100 pending jobs"
+
+      - alert: FailedJobsIncreasing
+        expr: increase(rq_failed_jobs_total[1h]) > 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Increasing failed jobs"
+          description: "More than 10 jobs failed in the last hour"
+
+  # Simulation/MARL Alerts (per Research Plan)
+  - name: simulation_alerts
+    rules:
+
+      - alert: SimulationAccuracyLow
+        expr: (simulation_to_live_accuracy < 0.9) and (simulation_to_live_accuracy > 0)
+        for: 1h
+        labels:
+          severity: warning
+        annotations:
+          summary: "Simulation accuracy below target"
+          description: "Simulation-to-live accuracy is below 90% target (current: {{ $value | printf \"%.2f\" }}%)"
+
+      - alert: MarlPolicyPendingEvaluation
+        expr: marl_policy_pending_ope_evaluation > 0
+        for: 24h
+        labels:
+          severity: info
+        annotations:
+          summary: "MARL policy awaiting OPE evaluation"
+          description: "A MARL policy has been pending OPE evaluation for more than 24 hours"

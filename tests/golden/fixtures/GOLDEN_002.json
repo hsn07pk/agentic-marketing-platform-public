@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_002",
+  "content": {
+    "headline": "Maximize ROI with Smart Action Prioritization",
+    "body": "CFOs demand measurable returns. Our platform delivers:\n\n[CLM_032] helps you avoid initiative overload by ranking actions based on expected ROI and feasibility.\n\n[CLM_040] shows how combining QWL with RL policy learning helps teams converge on fewer, higher-leverage actions.\n\nThe result? Better resource allocation and demonstrable business impact.",
+    "cta": "See the ROI Calculator",
+    "claims_used": ["CLM_032", "CLM_040"],
+    "platform": "linkedin",
+    "persona": "cfo"
+  },
+  "expected_safety_score": 0.90,
+  "expected_toxicity_score": 0.93,
+  "should_pass": true
+}

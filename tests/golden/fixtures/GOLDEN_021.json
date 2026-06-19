@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_021",
+  "content": {
+    "headline": "Executive-Level Leadership Insights",
+    "body": "Strategic decision-making requires executive-level intelligence. [CLM_003] demonstrates how QWL-guided, evidence-based actions help teams focus effort where impact is highest. [CLM_006] shows how team-level digital twin simulation prioritizes the next best leadership action under uncertainty, delivering the strategic advantage your organization needs.",
+    "cta": "Request Executive Briefing",
+    "claims_used": ["CLM_003", "CLM_006"],
+    "platform": "linkedin",
+    "persona": "cfo"
+  },
+  "expected_safety_score": 0.90,
+  "expected_toxicity_score": 0.94,
+  "should_pass": true
+}

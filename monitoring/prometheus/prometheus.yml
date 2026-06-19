@@ -1,0 +1,156 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    cluster: agentic-local
+    environment: development
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - alertmanager:9093
+rule_files:
+- /etc/prometheus/rules/*.yml
+scrape_configs:
+- job_name: prometheus
+  static_configs:
+  - targets:
+    - localhost:9090
+  metrics_path: /metrics
+- job_name: agentic-api
+  scrape_interval: 10s
+  metrics_path: /metrics/
+  static_configs:
+  - targets:
+    - 172.19.0.1:8000
+  relabel_configs:
+  - source_labels:
+    - __address__
+    target_label: instance
+    replacement: agentic-api
+  scheme: http
+- job_name: postgres
+  static_configs:
+  - targets:
+    - postgres-exporter:9187
+  relabel_configs:
+  - source_labels:
+    - __address__
+    target_label: instance
+    replacement: agentic-postgres
+- job_name: redis
+  static_configs:
+  - targets:
+    - redis-exporter:9121
+  relabel_configs:
+  - source_labels:
+    - __address__
+    target_label: instance
+    replacement: agentic-redis
+- job_name: node
+  static_configs:
+  - targets:
+    - node-exporter:9100
+  relabel_configs:
+  - source_labels:
+    - __address__
+    target_label: instance
+    replacement: agentic-host
+- job_name: cadvisor
+  static_configs:
+  - targets:
+    - cadvisor:8080
+  relabel_configs:
+  - source_labels:
+    - __address__
+    target_label: instance
+    replacement: agentic-containers
+  metric_relabel_configs:
+  - source_labels:
+    - id
+    regex: .*docker-4f478cbdba38.*
+    target_label: name
+    replacement: agentic_promtail
+  - source_labels:
+    - id
+    regex: .*docker-cf3a0ad29b70.*
+    target_label: name
+    replacement: agentic_cadvisor
+  - source_labels:
+    - id
+    regex: .*docker-2d851c60edd6.*
+    target_label: name
+    replacement: agentic_api
+  - source_labels:
+    - id
+    regex: .*docker-b1bf4ca6b798.*
+    target_label: name
+    replacement: agentic_mlflow
+  - source_labels:
+    - id
+    regex: .*docker-b03c3a0003f7.*
+    target_label: name
+    replacement: agentic_dashboard
+  - source_labels:
+    - id
+    regex: .*docker-c733863abfd2.*
+    target_label: name
+    replacement: agentic_worker
+  - source_labels:
+    - id
+    regex: .*docker-ffeb25e05883.*
+    target_label: name
+    replacement: agentic_grafana
+  - source_labels:
+    - id
+    regex: .*docker-36c7d442a356.*
+    target_label: name
+    replacement: agentic_prometheus
+  - source_labels:
+    - id
+    regex: .*docker-70e75eb655a0.*
+    target_label: name
+    replacement: agentic_node_exporter
+  - source_labels:
+    - id
+    regex: .*docker-3df3c9ae3a9d.*
+    target_label: name
+    replacement: agentic_alertmanager
+  - source_labels:
+    - id
+    regex: .*docker-905da68d7e97.*
+    target_label: name
+    replacement: agentic_loki
+  - source_labels:
+    - id
+    regex: .*docker-6de179668794.*
+    target_label: name
+    replacement: agentic_redis_exporter
+  - source_labels:
+    - id
+    regex: .*docker-592afb0896dd.*
+    target_label: name
+    replacement: agentic_postgres_exporter
+  - source_labels:
+    - id
+    regex: .*docker-847b9b3e6aaa.*
+    target_label: name
+    replacement: agentic_redis
+  - source_labels:
+    - id
+    regex: .*docker-b40a1cbf4bb9.*
+    target_label: name
+    replacement: agentic_postgres
+- job_name: loki
+  static_configs:
+  - targets:
+    - loki:3100
+  relabel_configs:
+  - source_labels:
+    - __address__
+    target_label: instance
+    replacement: agentic-loki
+- job_name: alertmanager
+  static_configs:
+  - targets:
+    - alertmanager:9093

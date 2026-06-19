@@ -1,0 +1,125 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Data files
+data/experiments/*.json
+data/experiments/*.pkl
+data/backups/*.sql
+data/backups/*.sql.gz
+
+# Keep directory structure
+!data/historical/.gitkeep
+!data/experiments/.gitkeep
+!data/backups/.gitkeep
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Docker
+*.pid
+*.seed
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Secrets
+*.key
+*.pem
+*.crt
+
+# Monitoring data
+monitoring/grafana/data/
+monitoring/prometheus/data/
+
+temp/
+*.txt
+secrets.toml
+screenshots/credentials.txt
+private/
+agentic/thesis-writing/prompt.md
+agentic/docs/technology-finland

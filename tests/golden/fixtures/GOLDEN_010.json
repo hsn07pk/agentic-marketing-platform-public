@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_010",
+  "content": {
+    "headline": "Quality Assurance Built In",
+    "body": "QA managers demand rigorous validation processes. [CLM_900] implements human-in-the-loop review with claim verification to reduce reputational risk when publishing AI-assisted content, ensuring every output meets your quality standards.",
+    "cta": "See Quality Process",
+    "claims_used": ["CLM_900"],
+    "platform": "linkedin",
+    "persona": "qa_manager"
+  },
+  "expected_safety_score": 0.93,
+  "expected_toxicity_score": 0.95,
+  "should_pass": true
+}

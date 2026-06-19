@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_011",
+  "content": {
+    "headline": "Professional Leadership Solutions",
+    "body": "Building high-performing teams requires evidence-based approaches. [CLM_003] demonstrates how QWL-guided, evidence-based actions help teams focus effort where impact is highest.\n\nOur professional methodology ensures sustainable improvements.",
+    "cta": "Discover Best Practices",
+    "claims_used": ["CLM_003"],
+    "platform": "twitter",
+    "persona": "technical_buyer"
+  },
+  "expected_safety_score": 0.95,
+  "expected_toxicity_score": 0.97,
+  "should_pass": true
+}

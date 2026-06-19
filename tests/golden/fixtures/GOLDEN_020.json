@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_020",
+  "content": {
+    "headline": "Realistic ROI Expectations",
+    "body": "CFOs appreciate honesty. [CLM_032] demonstrates how action ranking should consider expected ROI and feasibility to avoid initiative overload. [CLM_033] shows how simulation scenarios make assumptions explicit which helps decision makers evaluate risk, setting realistic expectations while delivering genuine value.",
+    "cta": "See Real-World Results",
+    "claims_used": ["CLM_032", "CLM_033"],
+    "platform": "email",
+    "persona": "cfo"
+  },
+  "expected_safety_score": 0.93,
+  "expected_toxicity_score": 0.96,
+  "should_pass": true
+}

@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_008",
+  "content": {
+    "headline": "Justify Your Investment with Evidence",
+    "body": "Decision makers need to justify every euro spent. Our platform provides:\n\n[CLM_034] - RAG grounding with citations increases trust in AI-authored drafts.\n\n[CLM_046] - Governed claims with citations increase trust and reduce legal risk in B2B messaging.\n\nEvery recommendation comes with evidence you can present to stakeholders.",
+    "cta": "Request Investment Analysis",
+    "claims_used": ["CLM_034", "CLM_046"],
+    "platform": "email",
+    "persona": "decision_maker"
+  },
+  "expected_safety_score": 0.91,
+  "expected_toxicity_score": 0.94,
+  "should_pass": true
+}

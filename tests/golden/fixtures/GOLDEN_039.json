@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_039",
+  "content": {
+    "headline": "Enterprise Leadership: Justify Your Investment with Confidence",
+    "body": "CFOs need more than promises—they need evidence. Our enterprise solution provides:\n\n[CLM_032] demonstrates how action ranking should consider expected ROI and feasibility to avoid initiative overload.\n\n[CLM_046] shows how governed claims with citations increase trust and reduce legal risk in B2B messaging.\n\nEvery recommendation comes with auditable evidence and clear ROI projections. Perfect for board presentations.",
+    "cta": "Request Enterprise Analysis",
+    "claims_used": ["CLM_032", "CLM_046"],
+    "platform": "linkedin",
+    "persona": "cfo"
+  },
+  "expected_safety_score": 0.93,
+  "expected_toxicity_score": 0.96,
+  "should_pass": true
+}

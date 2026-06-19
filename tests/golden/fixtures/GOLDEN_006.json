@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_006",
+  "content": {
+    "headline": "Optimize Testing with AI-Driven Insights",
+    "body": "Data scientists need robust methodologies. [CLM_042] uses Bayesian updating to stabilize QWL estimates in small samples compared to simple means, giving you reliable insights even with limited data.",
+    "cta": "Explore the Methodology",
+    "claims_used": ["CLM_042"],
+    "platform": "linkedin",
+    "persona": "data_scientist"
+  },
+  "expected_safety_score": 0.89,
+  "expected_toxicity_score": 0.93,
+  "should_pass": true
+}

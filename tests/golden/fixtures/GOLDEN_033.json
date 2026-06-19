@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_033",
+  "content": {
+    "headline": "Following Up on Your Demo Request",
+    "body": "Hi [Name],\n\nThank you for your interest in our platform. I wanted to follow up on your demo request with some relevant insights.\n\n[CLM_034] demonstrates how RAG grounding with citations increases trust in AI-authored drafts.\n\n[CLM_047] shows how persona-aware content outperforms generic templates by addressing specific objections and outcomes.\n\nThese capabilities would directly address the challenges you mentioned. When would be a good time to walk through a personalized demo?",
+    "cta": "Book Your Demo",
+    "claims_used": ["CLM_034", "CLM_047"],
+    "platform": "email",
+    "persona": "prospect"
+  },
+  "expected_safety_score": 0.88,
+  "expected_toxicity_score": 0.92,
+  "should_pass": true
+}

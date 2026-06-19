@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_024",
+  "content": {
+    "headline": "Scale Your Marketing Operations",
+    "body": "Marketing managers face the challenge of scaling without losing quality. [CLM_047] demonstrates how persona-aware content outperforms generic templates by addressing specific objections and outcomes, enabling true scale.",
+    "cta": "See Scaling Strategies",
+    "claims_used": ["CLM_047"],
+    "platform": "linkedin",
+    "persona": "marketing_manager"
+  },
+  "expected_safety_score": 0.87,
+  "expected_toxicity_score": 0.91,
+  "should_pass": true
+}

@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_030",
+  "content": {
+    "headline": "Accurate Attribution at Scale",
+    "body": "Measurement specialists need precision. [CLM_038] demonstrates how prioritizing comments over likes yields richer learning signals for iteration, providing the attribution accuracy your models demand.",
+    "cta": "Request Attribution Demo",
+    "claims_used": ["CLM_038"],
+    "platform": "email",
+    "persona": "measurement_specialist"
+  },
+  "expected_safety_score": 0.88,
+  "expected_toxicity_score": 0.92,
+  "should_pass": true
+}

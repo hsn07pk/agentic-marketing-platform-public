@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_019",
+  "content": {
+    "headline": "Value-Driven Leadership for All Teams",
+    "body": "Effective leadership creates value for every team member. [CLM_003] shows how QWL-guided, evidence-based actions help teams focus effort where impact is highest, benefiting the entire organization.",
+    "cta": "Explore Leadership Tools",
+    "claims_used": ["CLM_003"],
+    "platform": "linkedin",
+    "persona": "decision_maker"
+  },
+  "expected_safety_score": 0.91,
+  "expected_toxicity_score": 0.94,
+  "should_pass": true
+}

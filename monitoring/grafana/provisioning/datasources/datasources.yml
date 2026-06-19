@@ -1,0 +1,63 @@
+# monitoring/grafana/provisioning/datasources/datasources.yml
+# Grafana datasource provisioning for Agentic AI Agent Platform
+
+apiVersion: 1
+
+datasources:
+  # Prometheus - metrics
+  - name: Prometheus
+    type: prometheus
+    uid: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    editable: false
+    jsonData:
+      timeInterval: "15s"
+      httpMethod: POST
+      manageAlerts: true
+      prometheusType: Prometheus
+      prometheusVersion: "2.40.0"
+
+  # Loki - logs
+  - name: Loki
+    type: loki
+    uid: loki
+    access: proxy
+    url: http://loki:3100
+    editable: false
+    jsonData:
+      maxLines: 1000
+      derivedFields:
+        - datasourceUid: prometheus
+          matcherRegex: "campaign_id=(\\w+)"
+          name: campaign_id
+          url: '$${__value.raw}'
+
+  # PostgreSQL - direct database access for business dashboards
+  - name: PostgreSQL
+    type: postgres
+    uid: postgres
+    url: postgres:5432
+    database: agentic
+    user: agentic
+    secureJsonData:
+      password: $POSTGRES_PASSWORD
+    jsonData:
+      sslmode: disable
+      maxOpenConns: 5
+      maxIdleConns: 2
+      connMaxLifetime: 14400
+      postgresVersion: 1600
+      timescaledb: false
+    editable: false
+
+  # Alertmanager - alert management
+  - name: Alertmanager
+    type: alertmanager
+    uid: alertmanager
+    url: http://alertmanager:9093
+    access: proxy
+    jsonData:
+      implementation: prometheus
+    editable: false

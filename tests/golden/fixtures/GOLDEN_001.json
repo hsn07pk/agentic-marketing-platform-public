@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_001",
+  "content": {
+    "headline": "Transform Your Team's Performance with Data-Driven Actions",
+    "body": "Are you struggling to identify where your leadership efforts will have the biggest impact? [CLM_003] helps teams focus effort where impact is highest, using evidence-based methods that have been proven in practice.\n\nBy prioritizing actions based on quality of work life measurements, your team can achieve measurable improvements in both productivity and employee satisfaction.\n\nReady to make your leadership more effective?",
+    "cta": "Schedule a Demo Today",
+    "claims_used": ["CLM_003"],
+    "platform": "linkedin",
+    "persona": "decision_maker"
+  },
+  "expected_safety_score": 0.92,
+  "expected_toxicity_score": 0.95,
+  "should_pass": true
+}

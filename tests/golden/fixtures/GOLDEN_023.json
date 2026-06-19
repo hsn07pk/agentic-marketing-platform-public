@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_023",
+  "content": {
+    "headline": "Financial Metrics That Matter",
+    "body": "CFOs need clear financial ROI. [CLM_032] shows how action ranking should consider expected ROI and feasibility to avoid initiative overload.\n\n[CLM_036] demonstrates that Effective Work Time is a practical proxy for productivity when measured consistently.\n\nTranslating team performance into bottom-line results.",
+    "cta": "Calculate Your ROI",
+    "claims_used": ["CLM_032", "CLM_036"],
+    "platform": "email",
+    "persona": "cfo"
+  },
+  "expected_safety_score": 0.89,
+  "expected_toxicity_score": 0.93,
+  "should_pass": true
+}

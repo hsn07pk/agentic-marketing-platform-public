@@ -1,0 +1,24 @@
+# Connector placeholders — replace with real credentials/secrets
+hubspot:
+  api_key: "${HUBSPOT_PRIVATE_APP_TOKEN}"
+
+gmail:
+  auth: "oauth"          # or service_account if applicable
+
+linkedin:
+  app_id: "<LINKEDIN_APP_ID>"
+  app_secret: "<LINKEDIN_APP_SECRET>"
+  redirect_uri: "https://your.app/oauth/linkedin/callback"
+
+x:
+  api_key: "<X_API_KEY>"
+  api_secret: "<X_API_SECRET>"
+  bearer_token: "<X_BEARER_TOKEN>"
+  redirect_uri: "https://your.app/oauth/x/callback"
+
+slack:
+  bot_token: "<SLACK_BOT_TOKEN>"
+  signing_secret: "<SLACK_SIGNING_SECRET>"
+
+calcom:
+  api_base: "https://api.cal.com"

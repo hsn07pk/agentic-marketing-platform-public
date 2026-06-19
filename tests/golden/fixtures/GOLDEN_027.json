@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_027",
+  "content": {
+    "headline": "Real-Time Insights for Operations",
+    "body": "Operations managers need actionable insights now. [CLM_035] shows how short feedback loops improve action uptake among managers, enabling real-time course corrections that prevent costly delays.",
+    "cta": "See Dashboard Demo",
+    "claims_used": ["CLM_035"],
+    "platform": "email",
+    "persona": "operations_manager"
+  },
+  "expected_safety_score": 0.87,
+  "expected_toxicity_score": 0.91,
+  "should_pass": true
+}

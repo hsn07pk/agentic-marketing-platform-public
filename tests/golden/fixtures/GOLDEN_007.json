@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_007",
+  "content": {
+    "headline": "Stay Competitive with AI-Driven Innovation",
+    "body": "Innovation leaders must balance cutting-edge technology with practical implementation. [CLM_043] shows how simulating leadership actions as scenarios tests assumptions upfront and reduces wasted cycles, helping you innovate with confidence.",
+    "cta": "See Innovation in Action",
+    "claims_used": ["CLM_043"],
+    "platform": "linkedin",
+    "persona": "innovation_leader"
+  },
+  "expected_safety_score": 0.90,
+  "expected_toxicity_score": 0.94,
+  "should_pass": true
+}

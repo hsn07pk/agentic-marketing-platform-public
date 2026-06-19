@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_035",
+  "content": {
+    "headline": "How We Helped TechCorp Improve Team Performance 40%",
+    "body": "TechCorp faced a challenge: scattered leadership efforts with unclear ROI. Here's how we helped:\n\n[CLM_032] - Action ranking considers expected ROI and feasibility to avoid initiative overload.\n\n[CLM_040] - Combining QWL with RL policy learning helps teams converge on fewer, higher-leverage actions.\n\nThe result? 40% improvement in team performance metrics within 6 months.",
+    "cta": "Read Full Case Study",
+    "claims_used": ["CLM_032", "CLM_040"],
+    "platform": "linkedin",
+    "persona": "customer_success"
+  },
+  "expected_safety_score": 0.90,
+  "expected_toxicity_score": 0.94,
+  "should_pass": true
+}

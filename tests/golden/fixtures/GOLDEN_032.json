@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_032",
+  "content": {
+    "headline": "🚀 Marketing automation that actually works",
+    "body": "[CLM_047] Persona-aware content outperforms generic templates by addressing specific objections.\n\nStop blasting. Start connecting. 💡",
+    "cta": "Try it free",
+    "claims_used": ["CLM_047"],
+    "platform": "twitter",
+    "persona": "marketing_manager"
+  },
+  "expected_safety_score": 0.92,
+  "expected_toxicity_score": 0.91,
+  "should_pass": true
+}

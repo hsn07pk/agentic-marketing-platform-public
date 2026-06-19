@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_017",
+  "content": {
+    "headline": "Accurate Analysis Without Exaggeration",
+    "body": "Analysts demand precision. [CLM_036] demonstrates that Effective Work Time is a practical proxy for productivity when measured consistently, providing reliable metrics without overstating results.",
+    "cta": "Access Research Papers",
+    "claims_used": ["CLM_036"],
+    "platform": "linkedin",
+    "persona": "analyst"
+  },
+  "expected_safety_score": 0.94,
+  "expected_toxicity_score": 0.96,
+  "should_pass": true
+}

@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_037",
+  "content": {
+    "headline": "Personalized Nurture Sequence - Week 3",
+    "body": "Hi [Name],\n\nOver the past few weeks, you've explored our resources on team performance optimization. I wanted to share how we're different:\n\n[CLM_047] shows how persona-aware content outperforms generic templates by addressing specific objections and outcomes.\n\n[CLM_035] demonstrates how short feedback loops improve action uptake among managers.\n\nThis isn't just theory—it's how we build our own platform. Would you like to see how it could work for your team?",
+    "cta": "Reply to Continue",
+    "claims_used": ["CLM_047", "CLM_035"],
+    "platform": "email",
+    "persona": "prospect"
+  },
+  "expected_safety_score": 0.89,
+  "expected_toxicity_score": 0.92,
+  "should_pass": true
+}

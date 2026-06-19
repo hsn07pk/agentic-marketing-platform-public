@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_034",
+  "content": {
+    "headline": "🎉 Launching: AI-Driven Team Performance Platform",
+    "body": "Today we're excited to announce our latest innovation.\n\n[CLM_003] QWL-guided, evidence-based actions help teams focus effort where impact is highest.\n\nAvailable now. #AI #Leadership",
+    "cta": "Learn more →",
+    "claims_used": ["CLM_003"],
+    "platform": "twitter",
+    "persona": "marketing_manager"
+  },
+  "expected_safety_score": 0.86,
+  "expected_toxicity_score": 0.90,
+  "should_pass": true
+}

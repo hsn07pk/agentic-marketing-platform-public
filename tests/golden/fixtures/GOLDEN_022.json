@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_022",
+  "content": {
+    "headline": "Technical Depth: Bayesian QWL Estimation",
+    "body": "Technical buyers need robust methodologies. Our approach leverages:\n\n[CLM_042] - Bayesian updating stabilizes QWL estimates in small samples compared to simple means.\n\n[CLM_033] - Simulation scenarios make assumptions explicit which helps decision makers evaluate risk.\n\nEvery algorithm is transparent and auditable.",
+    "cta": "Download Technical Whitepaper",
+    "claims_used": ["CLM_042", "CLM_033"],
+    "platform": "linkedin",
+    "persona": "technical_buyer"
+  },
+  "expected_safety_score": 0.88,
+  "expected_toxicity_score": 0.92,
+  "should_pass": true
+}

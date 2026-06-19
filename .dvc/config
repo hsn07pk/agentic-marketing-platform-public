@@ -1,0 +1,10 @@
+# DVC Configuration for Agentic AI Marketing Platform
+# Per Research Plan Section 8.1 - Data Version Control
+
+[core]
+    # Autostage .dvc files for git add
+    autostage = true
+
+[cache]
+    # Local cache for single-machine setup
+    dir = cache

@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_003",
+  "content": {
+    "headline": "Data-Driven Decisions Start Here",
+    "body": "Technical buyers need proof, not promises. That's why we built our platform on proven methodologies:\n\n[CLM_006] enables team-level digital twin simulation to prioritize the next best leadership action under uncertainty.\n\nEvery recommendation is backed by evidence and validated through simulation.",
+    "cta": "Request Technical Deep Dive",
+    "claims_used": ["CLM_006"],
+    "platform": "email",
+    "persona": "technical_buyer"
+  },
+  "expected_safety_score": 0.88,
+  "expected_toxicity_score": 0.92,
+  "should_pass": true
+}

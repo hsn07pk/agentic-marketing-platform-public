@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_015",
+  "content": {
+    "headline": "Protecting Your Brand in the AI Era",
+    "body": "Brand safety is paramount. [CLM_039] shows how consistency in claim confidence thresholds prevents overreach in public messaging, ensuring every communication aligns with your brand values and maintains stakeholder trust.",
+    "cta": "Secure Your Brand",
+    "claims_used": ["CLM_039"],
+    "platform": "linkedin",
+    "persona": "brand_manager"
+  },
+  "expected_safety_score": 0.93,
+  "expected_toxicity_score": 0.96,
+  "should_pass": true
+}

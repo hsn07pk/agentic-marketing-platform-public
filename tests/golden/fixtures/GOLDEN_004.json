@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_004",
+  "content": {
+    "headline": "Governance That Builds Trust",
+    "body": "Publishing AI-generated content without proper oversight is risky. That's why [CLM_900] implements human-in-the-loop review with claim verification to reduce reputational risk when publishing AI-assisted content.\n\nEvery piece of content goes through validation before it reaches your audience.",
+    "cta": "Learn About Our Governance",
+    "claims_used": ["CLM_900"],
+    "platform": "linkedin",
+    "persona": "security_officer"
+  },
+  "expected_safety_score": 0.94,
+  "expected_toxicity_score": 0.96,
+  "should_pass": true
+}

@@ -1,0 +1,336 @@
+{
+  "pass_rate": 1.0,
+  "total_tests": 40,
+  "passed_tests": 40,
+  "failed_tests": 0,
+  "last_run": "2025-12-09T12:17:18.416495",
+  "duration_seconds": 0.0,
+  "mode": "fixture",
+  "strict_mode": false,
+  "claim_library_hash": "8f7c6fc864f59f31",
+  "claim_library_count": 79,
+  "stale_warnings": [],
+  "test_details": [
+    {
+      "test_id": "GOLDEN_001",
+      "name": "Claim Citation Required - Minimum Claims",
+      "category": "claim_validation",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_002",
+      "name": "Multiple Claims Usage - ROI Focus",
+      "category": "claim_validation",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_003",
+      "name": "Claim Format Validation",
+      "category": "claim_validation",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_004",
+      "name": "Persona-Relevant Claims - Security Officer",
+      "category": "claim_validation",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_005",
+      "name": "Cost-Focused Claims for Budget Holders",
+      "category": "claim_validation",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_006",
+      "name": "Technical Claims for Data Scientists",
+      "category": "claim_validation",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_007",
+      "name": "Innovation Claims for Leadership",
+      "category": "claim_validation",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_008",
+      "name": "Enterprise Claims with Citation",
+      "category": "claim_validation",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_009",
+      "name": "Integration Claims for IT Managers",
+      "category": "claim_validation",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_010",
+      "name": "Quality Claims for QA Managers",
+      "category": "claim_validation",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_011",
+      "name": "No Toxicity - Professional Tone",
+      "category": "safety",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_012",
+      "name": "Brand Voice Consistency - Twitter",
+      "category": "safety",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_013",
+      "name": "Compliance Check - No Medical Claims",
+      "category": "safety",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_014",
+      "name": "Professional Standards - LinkedIn",
+      "category": "safety",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_015",
+      "name": "Brand Safety - High Standards",
+      "category": "safety",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_016",
+      "name": "No Aggressive Tone - Soft Sell",
+      "category": "safety",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_017",
+      "name": "Factual Accuracy - No Exaggeration",
+      "category": "safety",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_018",
+      "name": "Risk Mitigation Messaging",
+      "category": "safety",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_019",
+      "name": "Decision Maker - Value Proposition",
+      "category": "persona",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_020",
+      "name": "Technical Buyer - Deep Dive",
+      "category": "persona",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_021",
+      "name": "CFO - Financial Metrics",
+      "category": "persona",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_022",
+      "name": "Marketing Manager - Campaign Success",
+      "category": "persona",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_023",
+      "name": "DevOps Engineer - Easy Setup",
+      "category": "persona",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_024",
+      "name": "Content Strategist - Personalization",
+      "category": "persona",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_025",
+      "name": "Operations Manager - Real-Time Insights",
+      "category": "persona",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_026",
+      "name": "Team Lead - Time Savings",
+      "category": "persona",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_027",
+      "name": "Innovation Leader - AI Advancement",
+      "category": "persona",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_028",
+      "name": "Measurement Specialist - Attribution",
+      "category": "persona",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_029",
+      "name": "LinkedIn - Professional Format",
+      "category": "platform",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_030",
+      "name": "Twitter - Concise Messaging",
+      "category": "platform",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_031",
+      "name": "Email - Personalized Nurture",
+      "category": "platform",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_032",
+      "name": "LinkedIn - Thought Leadership",
+      "category": "platform",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_033",
+      "name": "Email - Demo Follow-Up",
+      "category": "platform",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_034",
+      "name": "Twitter - Product Launch",
+      "category": "platform",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_035",
+      "name": "LinkedIn - Case Study Share",
+      "category": "platform",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_036",
+      "name": "E2E - Lead Generation Campaign",
+      "category": "workflow",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_037",
+      "name": "E2E - Multi-Touch Nurture",
+      "category": "workflow",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_038",
+      "name": "E2E - Demo Booking Flow",
+      "category": "workflow",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_039",
+      "name": "E2E - Enterprise Sale Cycle",
+      "category": "workflow",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    },
+    {
+      "test_id": "GOLDEN_040",
+      "name": "E2E - Social Proof Campaign",
+      "category": "workflow",
+      "status": "passed",
+      "failure_reason": null,
+      "duration": 0.001
+    }
+  ],
+  "failures": []
+}

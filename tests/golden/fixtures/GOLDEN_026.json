@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_026",
+  "content": {
+    "headline": "Scale Content Without Losing Personalization",
+    "body": "Content strategists need both scale and quality. [CLM_047] demonstrates how persona-aware content outperforms generic templates by addressing specific objections and outcomes, enabling personalization at scale.",
+    "cta": "View Content Strategy",
+    "claims_used": ["CLM_047"],
+    "platform": "linkedin",
+    "persona": "content_strategist"
+  },
+  "expected_safety_score": 0.88,
+  "expected_toxicity_score": 0.92,
+  "should_pass": true
+}

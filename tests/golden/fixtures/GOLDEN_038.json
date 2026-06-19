@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_038",
+  "content": {
+    "headline": "Your Personalized Demo is Ready",
+    "body": "Hi [Name],\n\nBased on our conversation and your interest in improving team performance, I've prepared a personalized demo focused on your specific challenges.\n\nWe'll cover:\n• [CLM_003] - How QWL-guided, evidence-based actions help teams focus effort where impact is highest\n• [CLM_032] - How action ranking considers expected ROI and feasibility to avoid initiative overload\n\nThis demo is customized for your use case and takes just 30 minutes.",
+    "cta": "Book Your Personalized Demo",
+    "claims_used": ["CLM_003", "CLM_032"],
+    "platform": "email",
+    "persona": "decision_maker"
+  },
+  "expected_safety_score": 0.90,
+  "expected_toxicity_score": 0.93,
+  "should_pass": true
+}

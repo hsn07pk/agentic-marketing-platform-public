@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_014",
+  "content": {
+    "headline": "Thought Leadership in Team Performance",
+    "body": "As leaders, we must balance innovation with practicality. [CLM_041] reveals how QWL emphasizes team-level variance, revealing performance bottlenecks that average scores hide.\n\nThis insight transforms how we understand organizational effectiveness.",
+    "cta": "Read the Full Article",
+    "claims_used": ["CLM_041"],
+    "platform": "linkedin",
+    "persona": "ceo"
+  },
+  "expected_safety_score": 0.92,
+  "expected_toxicity_score": 0.95,
+  "should_pass": true
+}

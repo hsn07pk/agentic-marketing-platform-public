@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_009",
+  "content": {
+    "headline": "Easy Integration, Powerful Results",
+    "body": "IT managers need solutions that integrate seamlessly with existing systems. [CLM_034] demonstrates how RAG grounding with citations increases trust in AI-authored drafts while maintaining compatibility with your workflow.",
+    "cta": "View Integration Guide",
+    "claims_used": ["CLM_034"],
+    "platform": "linkedin",
+    "persona": "it_manager"
+  },
+  "expected_safety_score": 0.88,
+  "expected_toxicity_score": 0.92,
+  "should_pass": true
+}

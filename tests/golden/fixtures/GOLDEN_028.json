@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_028",
+  "content": {
+    "headline": "Save 10+ Hours Per Week",
+    "body": "Team leads are overwhelmed. [CLM_035] demonstrates how short feedback loops improve action uptake among managers, reducing the time spent on follow-ups and status checks.",
+    "cta": "Calculate Time Savings",
+    "claims_used": ["CLM_035"],
+    "platform": "linkedin",
+    "persona": "team_lead"
+  },
+  "expected_safety_score": 0.86,
+  "expected_toxicity_score": 0.90,
+  "should_pass": true
+}

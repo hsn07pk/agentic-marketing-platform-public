@@ -1,0 +1,14 @@
+{
+  "test_id": "GOLDEN_036",
+  "content": {
+    "headline": "Transform Your Leadership Approach with Data",
+    "body": "Most leadership initiatives fail because they lack evidence-based prioritization. [CLM_003] demonstrates how QWL-guided, evidence-based actions help teams focus effort where impact is highest.\n\nOur platform combines:\n• Evidence-based recommendations\n• Clear ROI tracking\n• Actionable insights\n\nReady to see the difference data makes?",
+    "cta": "Schedule Your Demo",
+    "claims_used": ["CLM_003"],
+    "platform": "linkedin",
+    "persona": "decision_maker"
+  },
+  "expected_safety_score": 0.91,
+  "expected_toxicity_score": 0.94,
+  "should_pass": true
+}

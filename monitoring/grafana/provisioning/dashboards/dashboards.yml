@@ -1,0 +1,17 @@
+# monitoring/grafana/provisioning/dashboards/dashboards.yml
+# Grafana dashboard provisioning configuration
+
+apiVersion: 1
+
+providers:
+  - name: 'Agentic Dashboards'
+    orgId: 1
+    folder: 'Agentic AI Platform'
+    folderUid: 'agentic'
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 30
+    allowUiUpdates: true
+    options:
+      path: /var/lib/grafana/dashboards
+      foldersFromFilesStructure: false
